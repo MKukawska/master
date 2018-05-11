@@ -133,6 +133,8 @@ train_acc=hist.history['acc']
 val_acc=hist.history['val_acc']
 xc=range(50)
 
+plt.style.use(['classic'])
+
 plt.figure(1,figsize=(7,5))
 plt.plot(xc,train_loss)
 plt.plot(xc,val_loss)
@@ -141,7 +143,6 @@ plt.ylabel('loss')
 plt.title('Loss Function (crossentropy)')
 plt.grid(True)
 plt.legend(['train','val'],loc=2)
-plt.style.use(['classic'])
 
 plt.figure(2,figsize=(7,5))
 plt.plot(xc,train_acc)
@@ -151,4 +152,3 @@ plt.ylabel('Accuracy')
 plt.title('prediction')
 plt.grid(True)
 plt.legend(['train','val'],loc=2)
-plt.style.use(['classic'])
