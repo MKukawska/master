@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 path = ''
 os.chdir(path)
 
+# importing a model built by a colleague from TenorCell project for fitness calculation
 from variational_model import VariationalKerasModelWithScalers
 model = VariationalKerasModelWithScalers.get_from_experiment_name(path+'/test1')
 
