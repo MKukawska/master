@@ -91,6 +91,7 @@ function change_line(road, car, position, next_car_pos, space, dim, n_lines)
 end
 
 # for every car the function calculates the velocity in a given iteration and decides whether the car wants to change the line
+function set_velocity(Cars, road, dim, slowing_parameter, n_lines)
   for car in Cars
       new_v = min(car.curr_v + car.acceleration, car.max_v)
       position = sub2ind(road, car.line, car.distance)
@@ -134,10 +135,13 @@ function visualise(iterations, n_lines, dim, slowing_parameter, speed_limit)
   end
 end
 
+#=
 visualise(
-            iterations = 300, #number of simulation iterations
-            n_lines = 3, # how many lines the highway has
-            dim = 1000, # how long is the simulated part of highway (in meters)
-            slowing_parameter = 0.2, # probability that a car will slow down by one in every iteration (from Nagel Schreck model)
-            speed_limit = 15 # the speed limit on the road (in meters/second)
-            )
+            iterations          #number of simulation iterations
+            n_lines             # how many lines the highway has
+            dim                 # how long is the simulated part of highway (in meters)
+            slowing_parameter   # probability that a car will slow down by one in every iteration (from Nagel Schreck model)
+            speed_limit         # the speed limit on the road (in meters/second)
+            ) =#
+
+visualise(300, 3, 1000, 0.2, 15)
