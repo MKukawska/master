@@ -1,4 +1,4 @@
-par# This repository is a portfolio of my programming projects.
+This repository is a portfolio of my programming projects.
 
 Content:
   - genetic_algorithm.py - my implementation of genetic algorithm, which was prepared for TensorCell project. This is an early version. In the future it will be generalized more and rewriten to object oriented code.
