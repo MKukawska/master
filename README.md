@@ -1,7 +1,7 @@
 # This repository is a portfolio of my programming projects.
 
 Content:
-  - CIFAR10_classification.ipynb - a classification algorithm built for CIFAR 10 dataset with using Inception-v3 embedding
+  - CIFAR10_classification.ipynb - a classification algorithm built for CIFAR 10 dataset with using Inception-v3 embeddings
   
   - genetic_algorithm.py - my implementation of genetic algorithm, which was prepared for TensorCell project. This is an early version. In the future it will be generalized more and rewriten to object oriented code.
   
