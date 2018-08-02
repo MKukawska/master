@@ -5,7 +5,7 @@ import time
 import os
 import matplotlib.pyplot as plt
 
-path = ''
+path = 'C:/Users/Magda/Desktop/TensorCell/For_ICML'
 os.chdir(path)
 
 # importing a model built by a colleague from TenorCell project for fitness calculation
@@ -169,7 +169,7 @@ def one_generation(Results, Best_solutions, Population, Select_N, N_best, Offspr
     else:
         sys.exit("Unstable population")
     # Mutation
-    mutate_swap(NextGeneration, mutate_swap)
+    #mutate_swap(NextGeneration, mutate_swap)
     if binary == 1:
         mutate_random_change(NextGeneration, mutate_random, 2)
         NextGeneration = bin_to_int(NextGeneration, bin_length)
@@ -211,7 +211,7 @@ Results, Time, Best_solutions = genetic_algorithm(# Initialization
                                                   # Selection
                                                   Select_N = 20, # Number of chromosomes to be selected to parenatage population
                                                   N_best = 10, # Number of the best chromosomes to be deterministically selected to parenatage population
-                                                  selection_type = 'distance_based_selection', # 'distance_based_selection' or 'simple_selection'
+                                                  selection_type = 'simple_selection', # 'distance_based_selection' or 'simple_selection'
                                                   proportion = 0.7, # if 'distance_based_selection': distance based selection works well when after several iteration it is replaced by simple selection. Proportion variable indicates the share between distance based and simple selection.
                                                   
                                                   # Crossover
@@ -221,7 +221,7 @@ Results, Time, Best_solutions = genetic_algorithm(# Initialization
                                                   
                                                   #Mutation
                                                   mutate_swap = 0.01, # Probability of swap mutation
-                                                  mutate_random = 0.01 # Propability of random change mutation
+                                                  mutate_random = 0.02 # Propability of random change mutation
                                                   )
 
 plt.plot(range(len(Results)), Results, color="C0")
