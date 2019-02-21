@@ -39,13 +39,3 @@ def list_subdir_imgs(path_to_images):
         full_list += images
 
     return full_list
-
-
-
-
-
-
-
-
-
-
